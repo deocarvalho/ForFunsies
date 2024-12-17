@@ -21,6 +21,11 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="calculate_fireball_placement.py" />
+    <Compile Include="Cast Spell 1.py" />
+    <Compile Include="Cast Spell 2.py" />
+    <Compile Include="Cast Spell 3.py" />
+    <Compile Include="ConjureAnimals.py" />
     <Compile Include="simulate_fight.py" />
     <Compile Include="SudokuSolver.py" />
   </ItemGroup>
