@@ -4,13 +4,17 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>6f39fa1a-4987-4405-9997-2159ae4db19b</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>simulate_fight.py</StartupFile>
+    <StartupFile>calculate_fireball_placement.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
     <OutputPath>.</OutputPath>
     <Name>ForFunsies</Name>
     <RootNamespace>ForFunsies</RootNamespace>
+    <LaunchProvider>Standard Python launcher</LaunchProvider>
+    <InterpreterArguments>
+    </InterpreterArguments>
+    <EnableNativeCodeDebugging>False</EnableNativeCodeDebugging>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>true</DebugSymbols>
@@ -22,12 +26,20 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="calculate_fireball_placement.py" />
+    <Compile Include="calculate_fireball_placement_2.py" />
     <Compile Include="Cast Spell 1.py" />
     <Compile Include="Cast Spell 2.py" />
     <Compile Include="Cast Spell 3.py" />
     <Compile Include="ConjureAnimals.py" />
+    <Compile Include="longest_substrand.py" />
+    <Compile Include="movie_cli_2.py" />
+    <Compile Include="movie_cli.py" />
+    <Compile Include="simulate_fight_2.py" />
     <Compile Include="simulate_fight.py" />
     <Compile Include="SudokuSolver.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="movie_cli.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in

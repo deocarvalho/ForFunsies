@@ -1,0 +1,7 @@
+Genre|Movie|Release Date|Year|Oscar Winner|Lead Actor
+Action|Thunderstrike |6/15/2023 |2023 |Yes |Chris Hemsworth
+Comedy|Laugh Out Loud |8/22/2024 |2024 |No |Ryan Reynolds
+Drama |The Last Symphony |3/18/2024 |2024 |Yes |Meryl Streep
+Sci-Fi|Stellar Voyage |11/30/2023 |2023 |No |Benedict Cumberbatch
+Horror|Whispers in the Dark |10/13/2023 |2023 |No |Toni Collette
+Fantasy|Dreamweaver |12/5/2024 |2024 |No |Emma Watson

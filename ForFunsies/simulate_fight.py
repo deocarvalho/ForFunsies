@@ -61,7 +61,7 @@ def run_simulations(c1, c2, num_fights):
 #   6: number of damage dice, 
 #   7: type of damage die, 
 #   8: damage bonus)
-t_rex = ("T-Rex", 0, 136, 13, 1, 10, 4, 12, 7)
+t_rex = ("Tyrannosaurus Rex", 0, 136, 13, 1, 10, 4, 12, 7)
 giant_ape = ("Giant Ape", 2, 157, 12, 2, 9, 3, 10, 6)
 
 # Run 100000 simulations

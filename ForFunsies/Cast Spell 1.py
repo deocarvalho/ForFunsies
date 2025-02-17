@@ -10,29 +10,32 @@ def cast_spell(spell_name, caster_proficiency, caster_ability_mod, target_ac, ta
     spell = response.json()
 
     # Check if the spell requires an attack roll
-    if 'attack_roll' in spell:
+    if 'attack_type' in spell:
         # Make the attack roll
         attack_roll = random.randint(1, 20) + caster_proficiency + caster_ability_mod
 
         # Check if the attack hits
         if attack_roll >= target_ac:
-            return f'The {spell_name} spell hits the target with an attack roll of {attack_roll}.'
+            result = 'hits'
         else:
-            return f'The {spell_name} spell misses the target with an attack roll of {attack_roll}.'
+            result = 'misses'
+        return f'The {spell_name} spell {result} the target with an attack roll of {attack_roll}.'
+
 
     # Check if the spell requires a saving throw
-    elif 'saving_throw' in spell:
+    elif 'dc' in spell:
         # Get the type of saving throw
-        saving_throw = spell['saving_throw']
+        saving_throw = spell['dc']['dc_type']
 
         # Make the saving throw
-        saving_throw_roll = random.randint(1, 20) + target_proficiency + target_ability_mods[saving_throw[:3]]
+        saving_throw_roll = random.randint(1, 20) + target_proficiency + target_ability_mods[saving_throw['index']]
 
         # Check if the saving throw is successful
         if saving_throw_roll >= (8 + caster_proficiency + caster_ability_mod):
-            return f'The target successfully makes a {saving_throw} saving throw with a roll of {saving_throw_roll}.'
+            result = 'successfully makes'
         else:
-            return f'The target fails a {saving_throw} saving throw with a roll of {saving_throw_roll}.'
+            result = 'fails'
+        return f'The target {result} the {saving_throw['name']} saving throw with a roll of {saving_throw_roll}.'
 
 # Example 1: Casting "Fire Bolt" with a caster who has a proficiency bonus of 2 and an ability modifier of 3 against a target with an armor class of 15, a proficiency bonus of 2, and ability score modifiers of {'str': 1, 'dex': 2, 'con': 3, 'int': 4, 'wis': 5, 'cha': 6}
 print(cast_spell("Fire Bolt", 2, 3, 15, 2, {'str': 1, 'dex': 2, 'con': 3, 'int': 4, 'wis': 5, 'cha': 6}))

@@ -35,10 +35,10 @@ def handle_saving_throw(spell, spell_save_dc, target_ability_mod, target_profici
 
 def calculate_damage(spell, caster_level):
     if spell['level'] == 0:  # Cantrip damage scales with level
-        damage_level = math.ceil((caster_level + 2) // 6)
+        damage_level = math.floor((caster_level - 1) // 4) * 4 + 1
+        damage_string = spell['damage']['damage_at_character_level'].get(str(damage_level))
     else:
-        damage_level = spell['level']
-    damage_string = spell['damage']['damage_at_slot_level'].get(str(damage_level), spell['damage']['damage_at_character_level'].get(str(caster_level)))
+        damage_string = spell['damage']['damage_at_slot_level'].get(str(spell['level']))
     damage_parts = damage_string.split('d')
     num_dice = int(damage_parts[0])
     die_value = int(damage_parts[1])

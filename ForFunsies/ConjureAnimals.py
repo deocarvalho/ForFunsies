@@ -14,9 +14,19 @@ def conjure_animals(number_of_animals):
     cr = cr_map[number_of_animals]
     
     beasts = get_beasts(cr)
-    chosen_beasts = random.sample(beasts, number_of_animals)
-    return [beast['name'] for beast in chosen_beasts]
+    chosen_beasts = random.choices(beasts, k = number_of_animals)
+    beast_names = [beast['name'] for beast in chosen_beasts]
+    beast_names.sort()
+    return beast_names
 
 # Example usage:
-conjured_animals = conjure_animals(2)
+conjured_animals = conjure_animals(4)
+print(conjured_animals)
+conjured_animals = conjure_animals(4)
+print(conjured_animals)
+conjured_animals = conjure_animals(4)
+print(conjured_animals)
+conjured_animals = conjure_animals(4)
+print(conjured_animals)
+conjured_animals = conjure_animals(4)
 print(conjured_animals)
