@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>6f39fa1a-4987-4405-9997-2159ae4db19b</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>calculate_fireball_placement.py</StartupFile>
+    <StartupFile>Big Five Class Match 4.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -25,6 +25,10 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Big Five Class Match 4.py" />
+    <Compile Include="Big Five Class Match 3.py" />
+    <Compile Include="Big Five Class Match 2.py" />
+    <Compile Include="Big Five Class Match.py" />
     <Compile Include="calculate_fireball_placement.py" />
     <Compile Include="calculate_fireball_placement_2.py" />
     <Compile Include="Cast Spell 1.py" />
